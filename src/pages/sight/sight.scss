@@ -1,0 +1,38 @@
+page-sight {
+    ion-navbar{
+        text-align: center;
+        ion-title{
+            background-color: rgb(247,247,247);
+            padding-right: 54px;
+        }
+    }
+    ion-content{
+        .item-inner{
+            line-height: 50px;
+            font-size: 1.1em;
+            text-align: center;
+            border: none;
+        }
+        .sli{
+            margin-top: 2px;
+            margin-bottom: 3px;
+            height: 200px;
+            width: 100%;
+        }
+        .card{
+            margin-top: 20px;
+        }
+        ion-card{
+            .card-title-md{
+                margin: 4px 0;
+            }
+            .col{
+                height: 66px;
+                line-height: 44px;
+            }
+            p{
+                text-indent: 2em;
+            }
+        }
+}
+}

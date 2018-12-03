@@ -1,0 +1,38 @@
+<ion-header *ngFor="let arr of arr">
+  <ion-navbar>
+    <ion-title text-center style="padding-right: 54px;">{{ arr.title }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content  *ngFor='let arr of arr'>
+  <div class="div">
+  <img src="{{arr.img}}">
+  <div padding>
+    <h2>{{arr.title}}</h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;作者/{{arr.name}}</p>
+    <p>{{arr.msg}}</p>
+    <p class="date">{{arr.date}}</p>
+  </div>
+    <p>
+      <ion-list style="margin:0;">
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="{{arr.tx}}">
+            </ion-avatar>
+            <a style="position:relative;top:25px;">{{arr.name}}</a>
+            <button ion-button block outline class="btn">关注</button>
+            <ion-icon class="iconfont icon-xihuan" id="shc"></ion-icon>
+          </ion-item>
+        </ion-list>
+      </p>
+    </div>
+    <div>
+      <span>评论</span>
+      <p></p><p></p>
+      <input type="txt" placeholder="有什么感想？快来评论吧" style="width:100%">
+    </div>
+  </ion-content>
+  

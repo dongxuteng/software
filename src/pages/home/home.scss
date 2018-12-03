@@ -1,0 +1,27 @@
+page-home {
+    background-color:bisque !important;
+    ion-header{
+        height: 60px;
+    .rightFloat{
+        float: right;
+    }
+    .floatleft{
+        float: left;
+    }
+}
+
+
+    .a2{
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        .num{
+            font-size: 20px;
+        }
+    }
+    .a3{
+        position: absolute;
+        left:90%;
+        font-size: 25px;
+    }
+}

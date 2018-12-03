@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="main">
+    <div class="img">
+      <h4> 简 · 语 </h4>
+    </div>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon ios="ios-menu" md="md-person"></ion-icon>
+          Username
+        </ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+        <ion-icon ios="ios-menu" md="md-lock"></ion-icon>
+          Password
+        </ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 style="text-align:left; text-indent: 1em;">
+            忘记密码？
+          </ion-col>
+          <ion-col col-6 style="text-align: right;">
+            <ion-note (click)="goSignup()">注册</ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button ion-button class="login" (click)="return()">登录</button>
+  </div>
+  <fieldset class="footer">
+    <legend>&nbsp;&nbsp;&nbsp;&nbsp;第三方登录&nbsp;&nbsp;&nbsp;&nbsp;</legend>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <i class="iconfont">&#xe613;</i>
+        </ion-col>
+        <ion-col col-4>
+          <i class="iconfont">&#xe602;</i>
+        </ion-col>
+        <ion-col col-4>
+          <i class="iconfont">&#xe698;</i>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </fieldset>
+</ion-content>

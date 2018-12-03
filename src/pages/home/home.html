@@ -1,0 +1,44 @@
+<ion-header>
+    <!-- 获取当前时间 -->
+    <ion-title>
+      <span class="floatleft">{{this.Date}}/<span style="font-size:5px">{{this.Mon}}.{{this.Year}}</span></span>
+      <span class="rightFloat" >
+        <iframe id="fancybox-frame" class="rightFloat" style="width:45%;height:25px;" name="fancybox-frame1542970323962" frameborder="0" scrolling="no" hspace="0"  src="http://i.tianqi.com/index.php?c=code&a=getcode&id=34&h=25&w=280"></iframe>
+      </span>
+      </ion-title>      
+</ion-header>
+
+<ion-content padding>
+  <ion-slides  loop>
+    <ion-slide  *ngFor='let arr of arr'>
+      <!--图片-->
+      <ion-card (click)="Go_nr()">
+          <img src="{{arr.img}}"/>
+          <ion-card-content>
+            <ion-card-title>
+                {{arr.title}}
+              </ion-card-title>
+            <p>
+                {{arr.msg}}
+            </p>
+            <ion-list>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="{{arr.tx}}">
+                  </ion-avatar>
+                  <a>{{arr.name}}</a>
+                  <span  class="a2"><i class="iconfont icon-xiaoxi" style="font-size:25px"></i><span class="num">{{arr.num}}</span></span>
+                  <span  class="a3"><ion-icon class="iconfont icon-xihuan" style="font-size:25px"></ion-icon></span>
+                </ion-item>
+              </ion-list>
+          </ion-card-content>
+        </ion-card>
+    </ion-slide>  
+  </ion-slides>
+  <ion-fab style="position:absolute;top:450px; right:10px;">
+    <button ion-fab color="primary" (click)="Go_fb()">+</button>
+  </ion-fab>
+  <!-- <ion-fab>
+      <button ion-fab>+</button>
+  </ion-fab> -->
+</ion-content>

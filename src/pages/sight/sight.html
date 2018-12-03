@@ -1,0 +1,93 @@
+<!-- 侧边菜单 -->
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>分类</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item>
+        精选
+      </button>
+      <button ion-item>
+        随笔
+      </button>
+      <button ion-item>
+        情感
+      </button>
+      <button ion-item>
+        励志
+      </button>
+      <button ion-item>
+        美食
+      </button>
+      <button ion-item>
+        旅行
+      </button>
+      <button ion-item>
+        音乐
+      </button>
+      <button ion-item>
+        影视
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+<!-- 标题栏 -->
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+      </button>
+    <ion-title>精选</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- 轮播图 -->
+  <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+    <ion-slide *ngFor = "let src of srcs">
+      <img src="{{ src }}" alt="">
+    </ion-slide>
+  </ion-slides>
+  
+  <!-- 卡片 -->
+  <ion-card *ngFor = "let assey of asseys">
+    <img src="{{ assey.imgSrc }}">
+    <ion-card-content>
+      <ion-card-title>{{ assey.title }}</ion-card-title>
+      <p class="inner">{{ assey.inner }}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col col-8>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="{{ assey.iconSrc }}">
+          </ion-avatar>
+          <h2 style="text-align: left">{{ assey.name }}</h2>
+          <p style="text-align: left">{{ assey.talk }}</p>
+        </ion-item>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>{{ assey.likes }}</div>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-button icon-start clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>{{ assey.comments }}</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <!-- 下拉刷新 -->
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+</ion-content>
